@@ -1,20 +1,44 @@
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
 
+        {      //
+            System.out.println("\nЗадача 1\n");    // Переменые Урок первый
+            System.out.println("1 2 3 4 5 6 7 8 9 10");
+            for (int i = 1; i <= 10; i++) {
+                System.out.print(i + " ");
+            }
+
+        }
+
         {
-            System.out.println("\nПеременные! Урок первый.\n");    // Переменые Урок первый
-            byte appels = 57;   // тип переменных "byte". Диапазон значений от -128 до 127.
-            short cars =  32_526; // тип переменных "short". Диапазон значений от -32 768 до 32 767.
-            int salary = 127_000; // тип переменных "int". Диапазон значений от -2 147 483 648 до 2 147 483 647.
-            long stars = 9_157_496_826_194L; // тип переменных "long". Диапазон значений от -9 223 372 036 854 775 808 до 9 223 372 036 854 775 807.
-            float task = 9.4562134548464545f;
-            System.out.println(task);
+            //
+            System.out.println("\n\nЗадача 2\n");
+            int sum = 0;
+            for (int i = 1; i <= 100; i++) {
+                sum += i;
+            }
+            System.out.println("Сумма чисел от 1 до 100: " + sum);
+        }
 
+        {
+            //
+            System.out.println("\n\nЗадача 3\n");
+            long sum = 1L;
+            for (int i = 1; i <= 65; i++) {
+                sum = sum * i;
+            }
+            System.out.println("Факториал числа 100: " + sum);
+        }
 
-
+        {
+            //
+            System.out.println("\n\nЗадача 3\n");
+            int a = 12;
+            if (a % 2 == 0) {
+                System.out.println("Число " + a + " простое");
+            } else {
+                System.out.println("Число " + a + " не простое");
+            }
         }
 
 
