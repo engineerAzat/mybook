@@ -1,47 +1,26 @@
 public class Main {
     public static void main(String[] args) {
 
-        {      //
-            System.out.println("\nЗадача 1\n");    // Переменые Урок первый
-            System.out.println("1 2 3 4 5 6 7 8 9 10");
-            for (int i = 1; i <= 10; i++) {
-                System.out.print(i + " ");
-            }
-
+        String phone = "+950-348 40-14";
+        phone = phone.replace("-", "");
+        phone = phone.replace(" ", "");
+        phone = phone.replace("+", "");
+        if (phone.length() == 10) {
+            phone = '7' + phone;
+        } else if (phone.length() > 11) {
+            throw new RuntimeException("Телефон слишком длинный");
+        } else if (phone.length() < 10) {
+            throw new RuntimeException("Телефон слишком короткий");
+        } else if (phone.length() == 11 && phone.charAt(0) != '7') {
+            throw new RuntimeException("Среди нас чужой!");
         }
-
-        {
-            //
-            System.out.println("\n\nЗадача 2\n");
-            int sum = 0;
-            for (int i = 1; i <= 100; i++) {
-                sum += i;
-            }
-            System.out.println("Сумма чисел от 1 до 100: " + sum);
+        System.out.println("phone = " + phone);
+        String expectedPhone = "79503484014";
+        if (phone.equals(expectedPhone)) {
+            System.out.println("Успех");
+        } else {
+            System.out.println("Неудача");
         }
-
-        {
-            //
-            System.out.println("\n\nЗадача 3\n");
-            long sum = 1L;
-            for (int i = 1; i <= 65; i++) {
-                sum = sum * i;
-            }
-            System.out.println("Факториал числа 100: " + sum);
-        }
-
-        {
-            //
-            System.out.println("\n\nЗадача 3\n");
-            int a = 12;
-            if (a % 2 == 0) {
-                System.out.println("Число " + a + " простое");
-            } else {
-                System.out.println("Число " + a + " не простое");
-            }
-        }
-
-
 
 
     }
