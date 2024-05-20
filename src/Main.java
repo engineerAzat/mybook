@@ -1,27 +1,39 @@
 public class Main {
+
+
+    public static void printSeparator() {
+        System.out.println("+++++++++++++");
+        System.out.println("-------------");
+    }
+    public static void printIssues(int issueCount){
+        System.out.println(issueCount);
+    }
+
+    public static int sum(int[] numbers){
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            sum = sum + numbers(i);
+        }
+        return sum;
+    }
+
+    private static int numbers(int i) {
+        return i;
+    }
+
+
     public static void main(String[] args) {
-
-        String phone = "+950-348 40-14";
-        phone = phone.replace("-", "");
-        phone = phone.replace(" ", "");
-        phone = phone.replace("+", "");
-        if (phone.length() == 10) {
-            phone = '7' + phone;
-        } else if (phone.length() > 11) {
-            throw new RuntimeException("Телефон слишком длинный");
-        } else if (phone.length() < 10) {
-            throw new RuntimeException("Телефон слишком короткий");
-        } else if (phone.length() == 11 && phone.charAt(0) != '7') {
-            throw new RuntimeException("Среди нас чужой!");
+        int [] issuesByMonths = {4, 6, 7, 9, 2, 5, 12, 3, 7, 10, 6, 7, 1, 8};
+        printSeparator();
+        for (int i = 0; i < issuesByMonths.length; i++) {
+            printIssues(issuesByMonths[i]);
+            if ((i + 1) % 3 == 0) {
+                printSeparator();
+            }
         }
-        System.out.println("phone = " + phone);
-        String expectedPhone = "79503484014";
-        if (phone.equals(expectedPhone)) {
-            System.out.println("Успех");
-        } else {
-            System.out.println("Неудача");
-        }
-
+        printSeparator();
+        int total = sum(issuesByMonths);
+        printIssues(total);
 
     }
 
