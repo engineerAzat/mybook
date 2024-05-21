@@ -1,29 +1,25 @@
 public class Main {
 
+    public static void printSeparator(){
+        System.out.println("+++++++++++++++++++++");
+        System.out.println("---------------------");
 
-    public static void printSeparator() {
-        System.out.println("+++++++++++++");
-        System.out.println("-------------");
     }
-    public static void printIssues(int issueCount){
+
+    public static void printIssues(int issueCount) {
         System.out.println(issueCount);
     }
 
-    public static int sum(int[] numbers){
+    public static int sum(int [] numbers){
         int sum = 0;
         for (int i = 0; i < numbers.length; i++) {
-            sum = sum + numbers(i);
+            sum = sum + numbers[i];
         }
         return sum;
     }
 
-    private static int numbers(int i) {
-        return i;
-    }
-
-
     public static void main(String[] args) {
-        int [] issuesByMonths = {4, 6, 7, 9, 2, 5, 12, 3, 7, 10, 6, 7, 1, 8};
+        int[] issuesByMonths = {4, 6, 7, 9, 2, 5, 12, 3, 7, 10, 6, 7, 1, 8};
         printSeparator();
         for (int i = 0; i < issuesByMonths.length; i++) {
             printIssues(issuesByMonths[i]);
@@ -34,7 +30,6 @@ public class Main {
         printSeparator();
         int total = sum(issuesByMonths);
         printIssues(total);
-
     }
 
-    }
+}
